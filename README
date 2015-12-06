@@ -1,0 +1,15 @@
+This is a neat tool to find memory leak in your project.
+
+@ Modifications:
+1) Include leak_check.h in your source files.
+2) Modify Makefile line 3 by assigning appropriate path to your project directory.
+
+@ Make and Install:
+1) make //Will compile leak check module.
+2) make install //Will copy object files(*.o to your project directory)
+
+@ Use:
+1) Create your project executable by linking to these leak check object files.
+    acts@boss:~/MyProject/$ gcc -o MyExeCanDoLeakCheck myProjectObjects.o leak_check_data_structure.o  leak_check.o //leak_check_data_structure.o  leak_check.o are the two object files for leak checking
+
+    acts@boss:~/MyProject/$ ./MyExeCanDoLeakCheck  
